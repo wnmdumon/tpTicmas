@@ -1,0 +1,624 @@
+
+/* Tipografias */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* General */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: 'Bebas Neue', cursive;
+    background-image: url(../media/Fondo1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Fondo general*/
+
+main{
+    width: 100%;
+    height: 87rem;
+}
+
+/* NAV */
+
+nav{
+    height: 80px;
+    width: 100%;
+    background-image: linear-gradient(to right, #04161e, #03273a, #092f46, #073351, #093251, #62a4df, #052240, #092c57, #072146, #00215f, #001446, #000000); 
+    position: fixed;
+    top:0;
+    z-index: 100;
+}
+.enlace{
+    position: absolute;
+    padding: 20px 50px;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #fff;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+li a.active, li a:hover{
+    /* background: #000090; */
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+section{
+    background: url(fondo.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: calc(100vh - 80px);
+}
+
+.tituloprincipal{
+    text-align: center;
+    font-size: 40px;
+    padding: 10px;
+}
+
+@media (max-width: 952px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(to right, #5cb8e4, #5cb4e3, #5db0e2, #5eace1, #60a8e0, #62a4df, #65a0dd, #689cdb, #6c98d8, #7093d6, #748fd3, #788acf); ;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        letter-spacing: 2px;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a{
+        background: none;
+        color: blue;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+}
+/* FINAL NAV */
+
+/* Header */
+
+header{
+    height: 63rem;
+    width: 100%;
+    margin-top: 87px;
+}
+
+/* boton darkmode */
+#darkMode{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-left: 88%;
+    background: gray url(../media/bombilla.png) no-repeat;
+    background-size: 98%;
+    position: fixed;
+}
+
+#darkMode:hover{
+    border: #484fa8 2px solid;
+}
+
+#darkMode:active{
+    background: rgb(192, 192, 42) no-repeat;
+    background-size: 98%;
+}
+
+.dark-mode {
+    background-image: none;
+    background-color: #252525;
+    color: #f2f2f2;
+}
+/* fin boton darkmode */
+
+#titulosobremi{
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.letrafoto{
+    text-align: justify;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.contenedorfoto{
+    width: 100%;
+    height: 63rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid black 3px;
+}
+
+#fotoperfil{
+    width: 95%;
+    border-radius: 10%;
+    padding: 10px 0px 10px 20px;
+}
+
+.contenedorsobremi{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    width: 90%;
+}
+
+/* Habilidades */
+
+#titulohab{
+    text-align: center;
+    font-size: 32px;
+    padding: 15px;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+.caja-padre{
+    width: 96%;
+    border: solid black 3px;
+    margin: 10px 10px 0px 8px;
+    padding-bottom: 10px;
+}
+
+.contenedorhab{
+    width: 100%;
+    padding: 30px 30px 50px;
+
+}
+
+.skills:not(:last-child){
+    margin-bottom: 30px;
+}
+
+.detalles{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 22px;
+}
+
+.menu-hab{
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.menu-hab div{
+    width: 0;
+    height: 8px;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #5cb8e4, #5cb4e3, #5db0e2, #5eace1, #60a8e0, #62a4df, #65a0dd, #689cdb, #6c98d8, #7093d6, #748fd3, #788acf);;
+}
+
+.sectionhabid{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* idiomas */
+.idiomas{
+    width: 96%;
+    border: solid black 3px;
+    margin: 10px 10px 0px 8px;
+    padding-bottom: 10px;
+}
+#tituloidio{
+    text-align: center;
+    font-size: 32px;
+    padding: 15px;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+/* seccion proyectos */
+
+.tarjetas{
+    border: solid black 3px;
+    margin: 10px 10px 0px 8px;
+    width: 96%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#titulomisproy{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.card {
+    width: 190px;
+    height: 254px;
+    border-radius: 1em;
+    padding: 1.9rem;
+    background: #f5f5f5;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    transition: 0.4s ease-out;
+    box-shadow: 0px 7px 20px rgba(43, 8, 37, 0.2);
+    margin: 20px 20px 30px 20px;
+   }
+   
+   .card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(../media/E-lector.png) center rgba(238, 116, 116, 0.4) no-repeat;
+    z-index: 2;
+    transition: 0.5s;
+   }
+   
+   .card-info {
+    position: relative;
+    z-index: 3;
+    color: white;
+    opacity: 0;
+    transform: translateY(20%);
+    transition: 0.5s;
+   }
+   
+   /*Text*/
+   .text-title {
+    font-size: 1.6rem;
+    font-weight: 500;
+   }
+   
+   .text-body {
+    letter-spacing: 1px;
+    font-size: 1rem;
+    margin: 5px 0 15px 0;
+   }
+   
+   /*Button*/
+   .card-button {
+    padding: 0.6rem;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    background: #484fa8;
+    color: whitesmoke;
+    font-weight: bold;
+    transition: 0.4s ease;
+    text-decoration: none;
+   }
+   
+   /*Image*/
+   .card-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #5CB8E4;
+    background: linear-gradient(to bottom, #e7aeae, rgb(51, 152, 199)) no-repeat;
+   }
+   
+   .buttonvis{
+    text-decoration: none;
+    color: whitesmoke;
+   }
+   /*Hover*/
+   .card:hover {
+    transform: translateY(5%);
+   }
+   
+   .card:hover:before {
+    opacity: 0.8;
+   }
+   
+   .card:hover .card-info {
+    opacity: 1;
+    transform: translateY(0);
+   }
+   
+   .card-button:hover {
+    background: rgba(77, 126, 218, 0.4);
+    color: #f5f5f5;
+   }
+/* fin seccion proyectos */
+
+/* Animacion Habilidades */
+
+#html-menu{
+    animation: html-bar 5s forwards;
+}
+
+@keyframes html-bar{
+    100%{
+        width: 70%;
+    }
+}
+
+#css-menu{
+    animation: css-bar 5s forwards;
+}
+
+@keyframes css-bar{
+    100%{
+        width: 60%;
+    }
+}
+
+#js-menu{
+    animation: js-bar 5s forwards;
+}
+
+@keyframes js-bar{
+    100%{
+        width: 20%;
+    }
+}
+
+#boots-menu{
+    animation: boots-bar 5s forwards;
+}
+
+@keyframes boots-bar{
+    100%{
+        width: 50%;
+    }
+}
+
+#wordp-menu{
+    animation: wordp-bar 5s forwards;
+}
+
+@keyframes wordp-bar{
+    100%{
+        width: 50%;
+    }    
+}
+
+#arg-menu{
+    animation: arg-bar 5s forwards;
+}
+
+@keyframes arg-bar{
+    100%{
+        width: 100%;
+    }    
+}
+
+#eeuu-menu{
+    animation: eeuu-bar 5s forwards;
+}
+
+@keyframes eeuu-bar{
+    100%{
+        width: 50%;
+    }    
+}
+
+#por-menu{
+    animation: por-bar 5s forwards;
+}
+
+@keyframes por-bar{
+    100%{
+        width: 20%;
+    }    
+}
+
+/* Footer */
+
+#titulofoot{
+    margin-left: 10px;
+}
+
+footer{
+    background-image: linear-gradient(to left, #04161e, #03273a, #092f46, #073351, #093251, #62a4df, #052240, #092c57, #072146, #00215f, #001446, #000000 );
+    padding: 12px 0px 0px 0px;
+    margin-top: 3px;
+}
+
+.contenedorfooter{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+a img{
+    width: 40px;
+}
+
+
+@media screen and (min-width: 500px){
+
+    .fotoperfil{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 979px){
+
+    /* media pc header */
+    #fotoperfil{
+        width: 90%;
+        height: 82%;
+    }
+    .contenedorsobremi{
+        display: flex;
+        flex-direction: row;
+        padding-top: 10px;
+        width: 100%;
+    }
+
+    #titulosobremi{
+        width: 40%;
+    }
+    
+    .letrafoto{
+        text-align: justify;
+        width: 80%;
+        height: 70%;
+        font-size: 18px;
+    }
+    .divtexto{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .divperfil{
+        width: 60%;
+    }
+    .contenedorfoto{
+        width: 100%;
+        height: 40rem;
+    }
+
+    header{
+        height: 40rem;
+        width: 96%;
+        margin-left: 20px;
+    }
+    .contenedorfooter{
+        padding-right: 170px;
+    }
+    #darkMode{
+        margin-left: 95%;
+    }
+
+    /* fin media pc header */
+
+    /* media pc habilidades */
+
+    .sectionhabid{
+        width: 100%;
+        height: 35rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: baseline;
+    }
+
+    #titulomisproy {
+        padding:35px;
+        font-size: 32px;
+        
+    }
+
+    .caja-padre{
+       width: 1400px;
+    }
+
+    .idiomas{
+        width: 1200px;
+    }
+
+    main{
+        height: 36rem;
+    }
+    .tarjetas{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 30px;
+        align-items: center;
+    }
+}
+
+    /* media tablet */
+    
+@media screen and (min-width: 499px) and (max-width: 978px){
+        
+    #fotoperfil{
+        width: 75%;
+        height: 90%;
+        padding-top: 10px;
+    }
+    .divperfil{
+        display: flex;
+        justify-content: center;
+        height: 35rem;
+        width: 100%;
+
+    }
+    .tarjetas{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contenedorfooter{
+        padding-right: 0px;
+    }
+    #darkMode{
+        margin-left: 92%;
+    }
+}
+
+@media screen and (max-width: 330px){
+    .detalles{
+        width: 100%;
+        font-size: 22px;
+    }
+    .contenedorfooter{
+        padding-right: 0px;
+    }
+    
+}
